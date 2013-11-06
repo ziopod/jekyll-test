@@ -1,4 +1,4 @@
-test
+Test
 ====
 
 For tests purpose
