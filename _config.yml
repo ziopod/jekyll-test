@@ -4,3 +4,6 @@ pygments: true
 
 source: .
 exclude: ['Gemfile', 'Gemfile.lock']
+
+baseurl: /test
+permalink: :title.html
