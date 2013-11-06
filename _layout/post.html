@@ -1,0 +1,13 @@
+<div class="container">
+	<article>
+		<time datetime="{{page.date}}">{{page.date | date: "%b %e, %Y"}}</time>
+		<header>
+			<h1>
+				<a href="{{page.url}}" title="{{page.title}}">{{page.title}}</a>
+			</h1>
+		</header>
+		<section role="post-content">
+			{{content}}
+		</section>
+	</article>
+</div>

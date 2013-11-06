@@ -1,0 +1,17 @@
+<div class="container">
+	
+
+	<p class="pagination">
+		{ % if pagination.previous_page %}
+			{ % if pagination.previous_page == 1 % }
+			<a class="next" href="/" title="recent posts">Recent&nbsp;posts&nbsp;&raquo;</a>
+			{ % else % }
+			<a class="next" href="/page//" title="Recent posts">Recent&nbsp;posts&nbsp;&raquo;</a>
+			{ % endif % }
+		{ % endif % }
+
+		{ % if pagination.next_page % }
+		<a class="prev" href="/page//" title="Older posts">&laquo;&nbsp;Older&nbsp;posts</a>
+		{ % endif % }
+	</p>
+</div>

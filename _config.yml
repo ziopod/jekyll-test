@@ -1,0 +1,11 @@
+markdown: rdiscount
+pygments: true
+permalink: /:year/:month/:title
+auto: true
+paginate: 6
+paginate_path: '/page/:num'
+
+exclude: ['.git']
+
+safe: true
+lsi: false

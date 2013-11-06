@@ -1,1 +1,37 @@
-Hello
+---
+layout: layout
+title: "Hello you"
+---
+
+<div class="container">
+	{% for post in pagination.post %}
+	<article>
+		<time datetime="{{post.date}}">{{ post.date | date: "%b %e, %Y"}}</time>
+		<header>
+			<h1>
+				<a href="{{post.url}}" title="{{post.title}}">{{post.title}}</a>
+			</h1>
+		</header>
+		<p>
+			{{ post.content | strip_html | truncate: 250}}
+		</p>
+		<p>
+			<a title="{{ post.title }}" href="{{post.url}}">Read post</a>
+		</p>
+	</article>
+	{% endfor %}
+
+	<p class="pagination">
+		{ % if pagination.previous_page %}
+			{ % if pagination.previous_page == 1 % }
+			<a class="next" href="/" title="recent posts">Recent&nbsp;posts&nbsp;&raquo;</a>
+			{ % else % }
+			<a class="next" href="/page/{{ pagination.previous_page }}/" title="Recent posts">Recent&nbsp;posts&nbsp;&raquo;</a>
+			{ % endif % }
+		{ % endif % }
+
+		{ % if pagination.next_page % }
+		<a class="prev" href="/page/{{pagination.next_page}}/" title="Older posts">&laquo;&nbsp;Older&nbsp;posts</a>
+		{ % endif % }
+	</p>
+</div>
